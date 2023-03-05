@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Valerija Horčička">
+    <meta name="keywords" content="Image, Text">
+    <title>Text and picture page</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-16x16.png">           
+    <!-- OUR STYLESHEET -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <!--main content-->
+    <div class="container">
+        <div class="half1">
+        </div>
+        <div class="half2">
+            <h1>Handcrafted and Responsibly Sourced</h1>
+            <p> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. 
+            </p>
+
+            <p id="hidden"> On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. 
+            </p>
+            <button onclick="paragraphDisplay();" id="mainBtn">Learn more</button>
+        </div>
+    </div>
+    <!--script-->
+    <script>
+        const hiddenParagraph = document.getElementById("hidden");
+        const btnDisapeare = document.getElementById("mainBtn");
+        
+        function paragraphDisplay() {
+            hiddenParagraph.classList.add('show-element');
+            btnDisapeare.classList.add('hide-element');
+        }
+    </script>
+    <noscript>Sorry, your browser doesn't support JavaScript.</noscript>
+</body>
