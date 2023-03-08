@@ -24,13 +24,41 @@
     align-items: center;
     justify-content: center;
   }
-
+  
+  /*main container*/
   .container {
     display: flex;
     flex-flow: column nowrap;
     height: 100%;
-    width: 45%;
+    width: 50%;
   }
+
+  /*heading container*/
+  .heading-container {
+    height: 10%;
+    text-align: center;
+    margin: 1vw auto;
+  }
+
+  button {
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    border-bottom: 2px solid var(--black);
+    background-color: transparent;
+  }
+
+
+   /*card container*/
+
+   .card-container {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    align-content: space-evenly;
+   }
 
   .card {
     width: 100%;
@@ -51,6 +79,7 @@
      border-radius: 50%;
   }
 
+/*images section in card container*/
   .mediumImg {
     position: absolute;
     top: 50%;
@@ -62,26 +91,49 @@
     z-index: 3;
   }
 
-  .img-parent::before {
-    content: url("./assets/images/graphic-blue.png");
+  .first-img-parent::before{
+    content: url(assets/images/graphic-orange.png);
     width: 100%;
     height: 100%;
     position: absolute;
     top: -20%;
-    left: -50%;
+    left: -43%;
   }
 
-  .img-parent::after {
-    content: url("assets/images/graphic-orange.png");
+  .second-img-parent::before {
+    content: url(assets/images/graphic-green.png);
     width: 100%;
     height: 100%;
     position: absolute;
-    bottom: -25%;
-    right: -40%;
-    transform: rotate(186deg);
+    bottom: -60%;
+    left: -30%;
+    transform: rotate(360deg);
   }
 
+  .second-img-parent::after {
+    content: url(assets/images/graphic-orange2.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -15%;
+    right: -45%;
+    transform: rotate(360deg);
+  }
+  
 
+  .third-img-parent::before {
+    content: url(assets/images/graphic-blue.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -60%;
+    right: -45%;
+    transform: rotate(360deg);
+  }
+
+  
+
+/*text underneath pictures im card container*/
   .text-parent {
     position: relative;
     bottom: 0;
@@ -93,4 +145,28 @@
   .heading {
     text-align: center;
     padding-top: 5vh;
+    font-size: large;
+  }
+
+
+  /*media queries*/
+  @media screen and (min-width: 992px) {
+    .container {
+      width: 90%;
+    }
+     .heading-container {
+      height: 30%;
+      margin-top: 4vw;
+     }
+
+    .card-container {
+      margin-top: -62vh;
+      height: 60%;
+      flex-direction: row;
+    }
+
+    .card {
+      margin: auto 2vw;
+      height: auto;
+    }
   }
